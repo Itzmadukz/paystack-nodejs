@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation|Paystack Order</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+    <div class="confirmation">
+        <h1>Order :<%= id %></h1>
+        <div class="receipt">
+            <% if (status === 'success') { %>
+                <p>Order Placed</p>
+                <% } else { %>
+                    <p>Order not Placed: Payment Failed</p>
+                    <% } %>
+        </div>
+    </div>
+</body>
+
+</html>
