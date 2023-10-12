@@ -15,7 +15,7 @@ body {
     box-sizing: border-box;
 }
 
-#form-container h2{ 
+#form-container h2 {
     text-align: center;
     font-size: 2em;
 }
@@ -60,20 +60,15 @@ body {
     background-color: #45a049;
 }
 
-.response-fail {
-    margin-top: 20px;
-    font-weight: bold;
+.confirmation {
+    background-color: white;
+    margin: 1em;
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    background-color: #f8d7da;
     padding: 2em;
-    color: #d64242
-}
-
-.response-pass {
-    margin-top: 20px;
-    font-weight: bold;
-    text-align: center;
-    background-color: #b3eeba;
-    padding: 2em;
-    color: #40af3e
+    border-radius: 15px;
 }

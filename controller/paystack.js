@@ -1,10 +1,11 @@
 let Paystack = require('paystack-node')
 const environment = process.env.NODE_ENV
-
-const paystack = new Paystack("Your_Private_Key", environment)
+const paystack_key = process.env.PAYSTACK_KEY
+const paystack = new Paystack(paystack_key, environment)
 
 exports.verify = async (req, res) => {
-    
+    console.log("===========Paystack==============")
+
     const ref = req.params.ref;
     // ==== Paystack verify call ===== ///
     let output;
@@ -27,12 +28,12 @@ exports.verify = async (req, res) => {
             console.log(error)
         })
 
-    /* 
-    Note: You will need to install express session or a session package
-    to make the out put accessible in the confirmation route or can use alternative methods
+
+    // Note: You will need to install express session or a session package
+    // to make the out put accessible in the confirmation route or can use alternative methods
 
     //session payload
-     req.session.output = output */
+    req.session.output = output
 
     res.redirect('/confirmation')
 }

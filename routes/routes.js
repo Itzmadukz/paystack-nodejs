@@ -17,7 +17,9 @@ router.post('/verify/:ref', paystack.verify)
 router.get('/confirmation', (req, res) => {
     const output = req.session.output
 
-    req.render('confirmation', { ...output })
+    console.log("===========confirmation==============")
+    console.log(output.status)
+    res.render('confirmation', { ...output })
 })
 
 module.exports = router
